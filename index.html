@@ -1,0 +1,265 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Осенняя Капсула</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #2c2c2c; /* Темный фон */
+            color: #e0e0e0; /* Светлый текст */
+        }
+        .container {
+            max-width: 960px; /* Максимальная ширина контейнера */
+            margin: auto; /* Центрирование контейнера */
+            padding: 20px;
+        }
+        .section-title {
+            background-color: #3a3a3a; /* Темно-серый фон для заголовков */
+            color: #ffffff; /* Белый текст */
+            text-align: center;
+            padding: 15px;
+            margin-top: 30px;
+            margin-bottom: 15px;
+            border-radius: 15px;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        .grid-section {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr); /* Два блока на строке, равномерно распределяя доступную ширину */
+            gap: 15px; /* Расстояние между блоками */
+            justify-content: center; /* Центрирование сетки на странице */
+            margin-bottom: 30px;
+        }
+        .item {
+            background-color: #3f3f3f; /* Чуть светлее фон для блоков */
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #555555; /* Темно-серая рамка */
+            cursor: pointer;
+            box-sizing: border-box;
+            width: 100%; /* Блок занимает всю доступную ширину в своей колонке */
+            aspect-ratio: 1170 / 1131; /* Сохраняет пропорции 1170px на 1131px */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .item a {
+            display: block;
+            width: 100%;
+            height: 100%;
+            border-radius: 15px;
+        }
+        .item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Растягивает изображение по размеру блока, обрезая лишнее */
+            border-radius: 15px;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+
+    <!-- Секция: НИЗ - 6 блоков -->
+    <div class="section-title">НИЗ</div>
+    <div class="grid-section">
+        <div class="item">
+            <a href="https://example.com/pants_1" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item2.jpg" alt="Белые брюки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/pants_2" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item1.jpg" alt="Светлые брюки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/pants_3" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item3.jpg" alt="Темные брюки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/pants_4" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item4.jpg" alt="Коричневые брюки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/pants_5" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item5.jpg" alt="Серые брюки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/pants_6" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item6.jpg" alt="Джинсы">
+            </a>
+        </div>
+    </div>
+
+    <!-- Разделитель -->
+    <hr class="border-gray-600 my-8">
+
+    <!-- Секция: ВЕРХ - 13 блоков -->
+    <div class="section-title">ВЕРХ</div>
+    <div class="grid-section">
+        <div class="item">
+            <a href="https://example.com/top_1" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item7.jpg" alt="Серый джемпер">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_2" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item8.jpg" alt="Черный джемпер">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_3" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item9.jpg" alt="Белая футболка">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_4" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item10.jpg" alt="Бежевый свитер">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_5" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item11.jpg" alt="Черный кардиган">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_6" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item12.jpg" alt="Светлый свитер">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_7" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item13.jpg" alt="Белая рубашка">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_8" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item14.jpg" alt="Черный топ">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_9" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item15.jpg" alt="Темный джемпер">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_10" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item16.jpg" alt="Тренч">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_11" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item17.jpg" alt="Серый свитшот">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_12" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item18.jpg" alt="Черная куртка">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/top_13" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item19.jpg" alt="Светлая куртка">
+            </a>
+        </div>
+    </div>
+
+    <!-- Разделитель -->
+    <hr class="border-gray-600 my-8">
+
+    <!-- Секция: ОБУВЬ - 5 блоков -->
+    <div class="section-title">ОБУВЬ</div>
+    <div class="grid-section">
+        <div class="item">
+            <a href="https://example.com/shoe_1" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item24.jpg" alt="Черные ботинки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/shoe_2" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item23.jpg" alt="Высокие черные сапоги">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/shoe_3" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item22.jpg" alt="Серые кроссовки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/shoe_4" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item21.jpg" alt="Ботинки на каблуке">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/shoe_5" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item20.jpg" alt="Коричневые сапоги">
+            </a>
+        </div>
+    </div>
+
+    <!-- Разделитель -->
+    <hr class="border-gray-600 my-8">
+
+    <!-- Секция: АКСЕССУАРЫ - 8 блоков -->
+    <div class="section-title">АКСЕССУАРЫ</div>
+    <div class="grid-section">
+        <div class="item">
+            <a href="https://example.com/accessory_1" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item25.jpg" alt="Кепка">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/accessory_2" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item26.jpg" alt="Солнечные очки">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/accessory_3" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item27.jpg" alt="Серьги">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/accessory_4" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item28.jpg" alt="Колье">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/accessory_5" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item29.jpg" alt="Сумка">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/accessory_6" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item30.jpg" alt="Шарф">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/accessory_7" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item31.jpg" alt="Ремень">
+            </a>
+        </div>
+        <div class="item">
+            <a href="https://example.com/accessory_8" target="_blank">
+                <img src="https://ibb.org.ru/images/2025/08/28/item32.jpg" alt="Часы">
+            </a>
+        </div>
+    </div>
+
+</div>
+
+</body>
+</html>
