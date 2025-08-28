@@ -11,6 +11,18 @@
             background-color: #2c2c2c; /* Темный фон */
             color: #e0e0e0; /* Светлый текст */
         }
+        .header-title {
+            background-color: #1a1a1a; /* Очень темный фон для шапки */
+            color: #ffffff; /* Белый текст */
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 2.5rem; /* Большой размер шрифта */
+            font-weight: 700; /* Очень жирный шрифт */
+            margin-bottom: 30px; /* Отступ снизу */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
+            border-bottom-left-radius: 15px; /* Скругление углов снизу */
+            border-bottom-right-radius: 15px;
+        }
         .container {
             max-width: 960px; /* Максимальная ширина контейнера */
             margin: auto; /* Центрирование контейнера */
@@ -64,41 +76,68 @@
             object-fit: cover; /* Растягивает изображение по размеру блока, обрезая лишнее */
             border-radius: 15px;
         }
+        .action-button-container {
+            text-align: center;
+            margin: 30px 0;
+        }
+        .action-button {
+            display: inline-block;
+            background-color: #555555; /* Средне-серый цвет для кнопки */
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 10px; /* Слегка скругленные углы для кнопки */
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .action-button:hover {
+            background-color: #6a6a6a; /* Немного светлее при наведении */
+            transform: translateY(-2px);
+        }
     </style>
 </head>
 <body>
+
+<div class="header-title">Осенняя капсула 2025</div>
+
+<!-- Кнопка под шапкой -->
+<div class="action-button-container">
+    <a href="obrazi.html" class="action-button">ГОТОВЫЕ ОБРАЗЫ</a>
+</div>
 
 <div class="container">
 
     <!-- Секция: НИЗ - 6 блоков -->
     <div class="section-title">НИЗ</div>
     <div class="grid-section">
-        <div class="item">
+        <div class="item" id="item1">
             <a href="https://www.wildberries.ru/catalog/306113997/detail.aspx" target="_blank">
                 <img src="./images/item2.jpg" alt="Белые брюки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item2">
             <a href="https://www.wildberries.ru/catalog/477821952/detail.aspx" target="_blank">
                 <img src="./images/item1.jpg" alt="Светлые брюки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item3">
             <a href="https://market.yandex.ru/card/kostyum-aaquamarina/103682796916?do-waremd5=ZPx-ymjGKfjFp4jCVSUaiw&ogV=-3" target="_blank">
                 <img src="./images/item3.jpg" alt="Темные брюки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item4">
             <a href="https://www.wildberries.ru/catalog/145282079/detail.aspx" target="_blank">
                 <img src="./images/item4.jpg" alt="Коричневые брюки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item5">
             <a href="https://www.wildberries.ru/catalog/372146632/detail.aspx" target="_blank">
                 <img src="./images/item5.jpg" alt="Серые брюки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item6">
             <a href="https://www.wildberries.ru/catalog/398366058/detail.aspx" target="_blank">
                 <img src="./images/item6.jpg" alt="Джинсы">
             </a>
@@ -111,67 +150,67 @@
     <!-- Секция: ВЕРХ - 13 блоков -->
     <div class="section-title">ВЕРХ</div>
     <div class="grid-section">
-        <div class="item">
+        <div class="item" id="item7">
             <a href="https://market.yandex.ru/card/kostyum-aaquamarina/103682796916?do-waremd5=ZPx-ymjGKfjFp4jCVSUaiw&ogV=-3" target="_blank">
                 <img src="./images/item7.jpg" alt="Серый джемпер">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item8">
             <a href="https://www.wildberries.ru/catalog/59609702/detail.aspx" target="_blank">
                 <img src="./images/item8.jpg" alt="Черный джемпер">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item9">
             <a href="https://www.wildberries.ru/catalog/272269074/detail.aspx" target="_blank">
                 <img src="./images/item9.jpg" alt="Белая футболка">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item10">
             <a href="https://market.yandex.ru/card/kostyum-aaquamarina/103682796916?do-waremd5=ZPx-ymjGKfjFp4jCVSUaiw&ogV=-3" target="_blank">
                 <img src="./images/item10.jpg" alt="Бежевый свитер">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item11">
             <a href="https://www.wildberries.ru/catalog/450998571/detail.aspx" target="_blank">
                 <img src="./images/item11.jpg" alt="Черный кардиган">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item12">
             <a href="https://www.wildberries.ru/catalog/265970569/detail.aspx?size=412595426" target="_blank">
                 <img src="./images/item12.jpg" alt="Светлый свитер">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item13">
             <a href="https://www.wildberries.ru/catalog/397085440/detail.aspx" target="_blank">
                 <img src="./images/item13.jpg" alt="Белая рубашка">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item14">
             <a href="https://www.wildberries.ru/catalog/241917919/detail.aspx" target="_blank">
                 <img src="./images/item14.jpg" alt="Черный топ">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item15">
             <a href="https://www.wildberries.ru/catalog/481246399/detail.aspx?size=672208231" target="_blank">
                 <img src="./images/item15.jpg" alt="Темный джемпер">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item16">
             <a href="https://www.wildberries.ru/catalog/234416775/detail.aspx?size=369370099" target="_blank">
                 <img src="./images/item16.jpg" alt="Тренч">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item17">
             <a href="https://www.wildberries.ru/catalog/224628009/detail.aspx" target="_blank">
                 <img src="./images/item17.jpg" alt="Серый свитшот">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item18">
             <a href="https://www.wildberries.ru/catalog/246150316/detail.aspx" target="_blank">
                 <img src="./images/item18.jpg" alt="Черная куртка">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item19">
             <a href="https://www.lamoda.ru/p/MP002XW0Z9QL/" target="_blank">
                 <img src="./images/item19.jpg" alt="Светлая куртка">
             </a>
@@ -184,27 +223,27 @@
     <!-- Секция: ОБУВЬ - 5 блоков -->
     <div class="section-title">ОБУВЬ</div>
     <div class="grid-section">
-        <div class="item">
+        <div class="item" id="item20">
             <a href="https://www.wildberries.ru/catalog/460728497/detail.aspx" target="_blank">
                 <img src="./images/item24.jpg" alt="Черные ботинки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item21">
             <a href="https://www.wildberries.ru/catalog/438963948/detail.aspx?size=622293082" target="_blank">
                 <img src="./images/item23.jpg" alt="Высокие черные сапоги">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item22">
             <a href="https://www.wildberries.ru/catalog/456458123/detail.aspx" target="_blank">
                 <img src="./images/item22.jpg" alt="Серые кроссовки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item23">
             <a href="https://www.wildberries.ru/catalog/322358703/detail.aspx?size=485011226" target="_blank">
                 <img src="./images/item21.jpg" alt="Ботинки на каблуке">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item24">
             <a href="https://www.lamoda.ru/p/xd001xw00y1l/shoes-sbalo-botinki/" target="_blank">
                 <img src="./images/item20.jpg" alt="Коричневые сапоги">
             </a>
@@ -217,48 +256,53 @@
     <!-- Секция: АКСЕССУАРЫ - 8 блоков -->
     <div class="section-title">АКСЕССУАРЫ</div>
     <div class="grid-section">
-        <div class="item">
+        <div class="item" id="item25">
             <a href="https://www.wildberries.ru/catalog/420563335/detail.aspx?size=601077269" target="_blank">
                 <img src="./images/item25.jpg" alt="Кепка">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item26">
             <a href="https://www.wildberries.ru/catalog/384456079/detail.aspx?size=557619676" target="_blank">
                 <img src="./images/item26.jpg" alt="Солнечные очки">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item27">
             <a href="https://www.wildberries.ru/catalog/447290058/detail.aspx?size=632186943" target="_blank">
                 <img src="./images/item27.jpg" alt="Серьги">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item28">
             <a href="https://www.wildberries.ru/catalog/438880873/detail.aspx?size=622174722" target="_blank">
                 <img src="./images/item28.jpg" alt="Колье">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item29">
             <a href="https://www.wildberries.ru/catalog/443874263/detail.aspx?size=628019619" target="_blank">
                 <img src="./images/item29.jpg" alt="Сумка">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item30">
             <a href="https://www.wildberries.ru/catalog/197064374/detail.aspx?size=319653632" target="_blank">
                 <img src="./images/item30.jpg" alt="Шарф">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item31">
             <a href="https://www.wildberries.ru/catalog/415294846/detail.aspx?size=595026383" target="_blank">
                 <img src="./images/item31.jpg" alt="Ремень">
             </a>
         </div>
-        <div class="item">
+        <div class="item" id="item32">
             <a href="https://www.wildberries.ru/catalog/43954973/detail.aspx" target="_blank">
                 <img src="./images/item32.jpg" alt="Часы">
             </a>
         </div>
     </div>
 
+</div>
+
+<!-- Кнопка внизу страницы -->
+<div class="action-button-container">
+    <a href="obrazi.html" class="action-button">ГОТОВЫЕ ОБРАЗЫ</a>
 </div>
 
 </body>
