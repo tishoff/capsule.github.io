@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Готовые образы</title>
+    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #2c2c2c; /* Темный фон */
+            color: #e0e0e0; /* Светлый текст */
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+        }
+        .header-title {
+            background-color: #1a1a1a; /* Очень темный фон для шапки */
+            color: #ffffff; /* Белый текст */
+            text-align: center;
+            padding: 25px 20px;
+            font-size: 2.5rem; /* Большой размер шрифта */
+            font-weight: 700; /* Очень жирный шрифт */
+            margin-bottom: 30px; /* Отступ снизу */
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3); /* Легкая тень */
+            border-bottom-left-radius: 15px; /* Скругление углов снизу */
+            border-bottom-right-radius: 15px;
+        }
+        .container {
+            flex-grow: 1;
+            max-width: 1200px; /* Увеличил максимальную ширину контейнера для 5 блоков */
+            margin: auto;
+            padding: 20px;
+        }
+        .outfit-grid {
+            display: grid;
+            grid-template-columns: repeat(5, 1fr); /* Строго 5 блоков на строке */
+            gap: 15px; /* Отступ между блоками */
+            margin-bottom: 30px;
+            justify-content: center;
+        }
+        .outfit-item {
+            background-color: #3f3f3f; /* Фон для блока образа */
+            border-radius: 15px;
+            overflow: hidden;
+            border: 1px solid #555555;
+            cursor: pointer;
+            box-sizing: border-box;
+            width: 100%;
+            aspect-ratio: 1170 / 1131; /* Сохраняет пропорции */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: transform 0.2s ease-in-out, box-shadow 0.2s ease-in-out;
+        }
+        .outfit-item:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.4);
+        }
+        .outfit-item img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover; /* Обрезает изображение, чтобы оно полностью заполнило блок */
+            border-radius: 15px;
+        }
+        .action-button-container {
+            text-align: center;
+            margin: 30px 0;
+            padding-bottom: 20px;
+        }
+        .action-button {
+            display: inline-block;
+            background-color: #555555;
+            color: #ffffff;
+            padding: 15px 30px;
+            border-radius: 10px;
+            text-decoration: none;
+            font-size: 1.2rem;
+            font-weight: 600;
+            transition: background-color 0.3s ease-in-out, transform 0.2s ease-in-out;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+        .action-button:hover {
+            background-color: #6a6a6a;
+            transform: translateY(-2px);
+        }
+
+        /* Стили для модального окна */
+        .modal {
+            display: none; /* Скрыто по умолчанию */
+            position: fixed; /* Фиксированное положение */
+            z-index: 1000; /* Поверх всего */
+            left: 0;
+            top: 0;
+            width: 100%; /* Полная ширина */
+            height: 100%; /* Полная высота */
+            overflow: auto; /* Включение прокрутки, если изображение слишком велико */
+            background-color: rgba(0, 0, 0, 0.8); /* Полупрозрачный черный фон */
+            justify-content: center;
+            align-items: center;
+        }
+        .modal-content {
+            margin: auto;
+            display: block;
+            max-width: 90%;
+            max-height: 90%;
+            object-fit: contain; /* Сохраняет пропорции и помещает изображение целиком */
+            border-radius: 15px;
+        }
+        .close-button {
+            position: absolute;
+            top: 20px;
+            right: 35px;
+            color: #f1f1f1;
+            font-size: 40px;
+            font-weight: bold;
+            transition: 0.3s;
+            cursor: pointer;
+        }
+        .close-button:hover,
+        .close-button:focus {
+            color: #bbb;
+            text-decoration: none;
+            cursor: pointer;
+        }
+
+        /* Медиа-запросы для адаптивности на очень маленьких экранах, чтобы не было горизонтальной прокрутки */
+        @media (max-width: 768px) {
+            .outfit-grid {
+                grid-template-columns: repeat(3, 1fr); /* 3 блока на строке для средних экранов */
+            }
+        }
+        @media (max-width: 480px) {
+            .outfit-grid {
+                grid-template-columns: repeat(2, 1fr); /* 2 блока на строке для маленьких экранов */
+            }
+        }
+    </style>
+</head>
+<body>
+
+<div class="header-title">Готовые образы</div>
+
+<div class="container">
+    <div class="outfit-grid">
+        <!-- Генерация 50 блоков с изображениями -->
+        <script>
+            const imagesBaseUrl = "./sets/"; // Путь к папке с изображениями
+            const totalImages = 50;
+            const outfitGrid = document.querySelector('.outfit-grid');
+
+            for (let i = 1; i <= totalImages; i++) {
+                const outfitItem = document.createElement('div');
+                outfitItem.classList.add('outfit-item');
+                outfitItem.setAttribute('data-img-src', imagesBaseUrl + i + '.jpg'); // Используем data-атрибут для src модального окна
+
+                const img = document.createElement('img');
+                img.src = imagesBaseUrl + i + '.jpg';
+                img.alt = `Образ ${i}`;
+
+                outfitItem.appendChild(img);
+                outfitGrid.appendChild(outfitItem);
+            }
+        </script>
+    </div>
+</div>
+
+<!-- Модальное окно -->
+<div id="imageModal" class="modal">
+    <span class="close-button">&times;</span>
+    <img class="modal-content" id="modalImage">
+</div>
+
+<!-- Кнопка "Назад" -->
+<div class="action-button-container">
+    <a href="index.html" class="action-button">НАЗАД К КАПСУЛЕ</a>
+</div>
+
+<script>
+    const imageModal = document.getElementById('imageModal');
+    const modalImage = document.getElementById('modalImage');
+    const closeButton = document.querySelector('.close-button');
+    const outfitItems = document.querySelectorAll('.outfit-item');
+
+    outfitItems.forEach(item => {
+        item.addEventListener('click', function() {
+            const imgSrc = this.getAttribute('data-img-src');
+            modalImage.src = imgSrc;
+            imageModal.style.display = 'flex'; // Используем flex для центрирования
+        });
+    });
+
+    closeButton.addEventListener('click', function() {
+        imageModal.style.display = 'none';
+    });
+
+    // Закрытие модального окна по клику вне изображения
+    imageModal.addEventListener('click', function(event) {
+        if (event.target === imageModal) {
+            imageModal.style.display = 'none';
+        }
+    });
+</script>
+
+</body>
+</html>
